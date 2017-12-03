@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Victor Ahsene</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="conteneurAcceuil">
+    <ion-grid>
+    <section>
+        <h1>I am a new junior developper web from 2017 </h1> </section>
+        <ion-row><ion-col width-60><img src="./assets/image/work.jpg" /></ion-col></ion-row>
+
+    <ion-item-group *ngFor="let data of abouts">
+        <ion-item-divider color="light">About Me</ion-item-divider>
+        <ion-item>
+            <ion-icon name="person" item-left></ion-icon>{{data.firstName}} {{data.name}}</ion-item>
+        <ion-item>
+            <ion-icon name="at" item-left></ion-icon>{{data.emailAddress}} </ion-item>
+        <ion-item>
+            <ion-icon name="home" item-left></ion-icon>{{data.address}} </ion-item>
+        <ion-item>
+            <ion-icon name="call" item-left></ion-icon>{{data.numberPhone}} </ion-item>
+        <ion-item-divider color="light">Education</ion-item-divider>
+        <ion-item *ngFor="let data of educations">
+            {{data.date_begin}}/{{data.date_end}} {{data.nameFormation}}
+        </ion-item>
+    </ion-item-group>
+    </ion-grid>
+</ion-content>

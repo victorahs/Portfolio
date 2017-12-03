@@ -1,0 +1,13 @@
+
+<ion-header>
+    <ion-navbar>
+        <ion-title>Skills</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-list>
+        <ion-item *ngFor='let data of skills'>
+            <ion-thumbnail item-left> <img src="./assets/image/{{data.skillPicture}}"> </ion-thumbnail>
+            <h2>{{data.skills}}</h2> </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,32 @@
+On déclare un attribut dans la classe :
+
+menuContest: any
+
+Dans le constructeur, on "rempli" cet attribut :
+
+// le menu
+this.menuContest = [
+  {
+    selector: 'page-result',
+    icon: 'trophy',
+    title: 'Classement général'
+  },
+  {
+    selector: 'page-chrono',
+    icon: 'timer',
+    title: 'Chrono live'
+  },
+  {
+    selector: 'page-concurents',
+    icon: 'contacts',
+    title: 'Concurents'
+  }
+];
+
+Dans la vue, on parcours ce tableau menuContest
+
+<button ion-item *ngFor="let menu of menuContest">
+  <ion-icon name="{{menu.icon}}" item-left></ion-icon>
+    {{ menu.title }}
+  <ion-icon name="arrow-forward" item-right></ion-icon>
+</button>

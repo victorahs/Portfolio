@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Contact
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <form #myForm='ngForm' (ngSubmit)="onSubmit(myForm)">
+
+        <ion-item>
+            <ion-label floating>Name</ion-label>
+            <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>FirstName</ion-label>
+            <ion-input type="text" [(ngModel)]="firstname" name="firstname"></ion-input>
+        </ion-item>
+
+
+
+        <ion-item>
+            <ion-label floating>Mail</ion-label>
+            <ion-input type="email" [(ngModel)]="mail" name="mail"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Message</ion-label>
+            <ion-textarea type="text" [(ngModel)]="message" name="message" ></ion-textarea>
+        </ion-item>
+
+
+        <button ion-button type="submit" block >Send</button>
+
+
+    </form>
+
+</ion-content>

@@ -1,0 +1,12 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Projects</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-slides [options]="slideOptions" pager loop autoplay>
+        <ion-slide *ngFor="let data of projects">
+            <h1>{{ data.nameProject }}</h1> <img src="./assets/image/{{ data.namepicture }}" />
+            <p>{{data.commentary}}</p> <a href="{{data.urlProject}}">See More</a> </ion-slide>
+    </ion-slides>
+</ion-content>
